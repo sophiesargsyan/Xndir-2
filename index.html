@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Dog Image</title>
+    <style>
+        body {
+            height: 2000px;
+        }
+        #dog-image {
+            position: absolute;
+            width: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <img id="dog-image" src="dog-image.jpg" alt="Dog Image">
+
+    <script>
+        document.addEventListener('click', function(event) {
+            var dogImage = document.getElementById('dog-image');
+            var x = event.pageX;
+            var y = event.pageY;
+
+            var offsetX = dogImage.width / 2;
+            var offsetY = dogImage.height / 2;
+
+            dogImage.style.left = (x - offsetX) + 'px';
+            dogImage.style.top = (y - offsetY) + 'px';
+        });
+    </script>
+</body>
+</html>
