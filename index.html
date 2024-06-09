@@ -20,12 +20,12 @@
 
     <script>
         document.addEventListener('click', function(event) {
-            var dogImage = document.getElementById('dog-image');
-            var x = event.pageX;
-            var y = event.pageY;
+            let dogImage = document.getElementById('dog-image');
+            let x = event.pageX;
+            let y = event.pageY;
 
-            var offsetX = dogImage.width / 2;
-            var offsetY = dogImage.height / 2;
+            let offsetX = dogImage.width / 2;
+            let offsetY = dogImage.height / 2;
 
             dogImage.style.left = (x - offsetX) + 'px';
             dogImage.style.top = (y - offsetY) + 'px';
